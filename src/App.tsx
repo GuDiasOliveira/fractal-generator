@@ -1,7 +1,7 @@
 import FractalGenerator from './components/FractalGenerator'
 import './App.css'
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <h1>Fractal Generator</h1>

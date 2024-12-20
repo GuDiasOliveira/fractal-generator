@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { FractalSettings } from '../types/fractal';
 import styles from './FractalGenerator.module.css';
 
-const FractalGenerator = () => {
-  const [settings, setSettings] = useState({
+const FractalGenerator: React.FC = () => {
+  const [settings, setSettings] = useState<FractalSettings>({
     iterations: 6,
     angle: 60,
     scale: 0.7,
@@ -10,11 +11,17 @@ const FractalGenerator = () => {
     strokeWidth: 2,
   });
 
-  const generateFractalPoints = (x, y, len, angle, depth) => {
+  const generateFractalPoints = (
+    x: number,
+    y: number,
+    len: number,
+    angle: number,
+    depth: number
+  ): string[] => {
     if (depth === 0) return [];
 
-    const endX = x + len * Math.cos(angle * Math.PI / 180);
-    const endY = y + len * Math.sin(angle * Math.PI / 180);
+    const endX = x + len * Math.cos((angle * Math.PI) / 180);
+    const endY = y + len * Math.sin((angle * Math.PI) / 180);
 
     const newLen = len * settings.scale;
     const leftAngle = angle - settings.angle;
@@ -27,10 +34,10 @@ const FractalGenerator = () => {
     ];
   };
 
-  const handleSettingChange = (name, value) => {
-    setSettings(prev => ({
+  const handleSettingChange = (name: keyof FractalSettings, value: number | string): void => {
+    setSettings((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
