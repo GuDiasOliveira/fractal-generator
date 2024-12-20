@@ -1,0 +1,11 @@
+{
+  "title": "Generatore di Frattali",
+  "controls": {
+    "iterations": "Iterazioni",
+    "angle": "Angolo",
+    "scale": "Scala",
+    "color": "Colore",
+    "strokeWidth": "Spessore Linea"
+  },
+  "language": "Lingua"
+}

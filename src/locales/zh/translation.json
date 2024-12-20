@@ -1,0 +1,11 @@
+{
+  "title": "分形生成器",
+  "controls": {
+    "iterations": "迭代次数",
+    "angle": "角度",
+    "scale": "比例",
+    "color": "颜色",
+    "strokeWidth": "线条宽度"
+  },
+  "language": "语言"
+}

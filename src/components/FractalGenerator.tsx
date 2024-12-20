@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FractalSettings } from '../types/fractal';
 import styles from './FractalGenerator.module.css';
 
 const FractalGenerator: React.FC = () => {
+  const { t } = useTranslation();
   const [settings, setSettings] = useState<FractalSettings>({
     iterations: 6,
     angle: 60,
@@ -47,7 +49,7 @@ const FractalGenerator: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.controls}>
         <div className={styles.controlGroup}>
-          <label>Iterations:</label>
+          <label>{t('controls.iterations')}:</label>
           <input
             type="range"
             min="1"
@@ -59,7 +61,7 @@ const FractalGenerator: React.FC = () => {
         </div>
 
         <div className={styles.controlGroup}>
-          <label>Angle:</label>
+          <label>{t('controls.angle')}:</label>
           <input
             type="range"
             min="0"
@@ -71,7 +73,7 @@ const FractalGenerator: React.FC = () => {
         </div>
 
         <div className={styles.controlGroup}>
-          <label>Scale:</label>
+          <label>{t('controls.scale')}:</label>
           <input
             type="range"
             min="0.1"
@@ -84,7 +86,7 @@ const FractalGenerator: React.FC = () => {
         </div>
 
         <div className={styles.controlGroup}>
-          <label>Color:</label>
+          <label>{t('controls.color')}:</label>
           <input
             type="color"
             value={settings.color}
@@ -93,7 +95,7 @@ const FractalGenerator: React.FC = () => {
         </div>
 
         <div className={styles.controlGroup}>
-          <label>Stroke Width:</label>
+          <label>{t('controls.strokeWidth')}:</label>
           <input
             type="range"
             min="1"

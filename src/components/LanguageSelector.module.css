@@ -1,0 +1,37 @@
+.languageSelector {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.languageSelector label {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.languageSelector select {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.languageSelector select:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.languageSelector select option {
+  background: #1a1a1a;
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Gerador de Fractais",
+  "controls": {
+    "iterations": "Iterações",
+    "angle": "Ângulo",
+    "scale": "Escala",
+    "color": "Cor",
+    "strokeWidth": "Espessura da Linha"
+  },
+  "language": "Idioma"
+}

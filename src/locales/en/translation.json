@@ -1,0 +1,11 @@
+{
+  "title": "Fractal Generator",
+  "controls": {
+    "iterations": "Iterations",
+    "angle": "Angle",
+    "scale": "Scale",
+    "color": "Color",
+    "strokeWidth": "Stroke Width"
+  },
+  "language": "Language"
+}

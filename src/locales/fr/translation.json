@@ -1,0 +1,11 @@
+{
+  "title": "Générateur de Fractales",
+  "controls": {
+    "iterations": "Itérations",
+    "angle": "Angle",
+    "scale": "Échelle",
+    "color": "Couleur",
+    "strokeWidth": "Épaisseur du Trait"
+  },
+  "language": "Langue"
+}

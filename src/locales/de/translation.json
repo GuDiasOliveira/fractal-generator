@@ -1,0 +1,11 @@
+{
+  "title": "Fraktal-Generator",
+  "controls": {
+    "iterations": "Iterationen",
+    "angle": "Winkel",
+    "scale": "Skala",
+    "color": "Farbe",
+    "strokeWidth": "Linienbreite"
+  },
+  "language": "Sprache"
+}

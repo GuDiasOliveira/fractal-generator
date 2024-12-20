@@ -1,0 +1,11 @@
+{
+  "title": "프랙탈 생성기",
+  "controls": {
+    "iterations": "반복 횟수",
+    "angle": "각도",
+    "scale": "크기",
+    "color": "색상",
+    "strokeWidth": "선 두께"
+  },
+  "language": "언어"
+}
