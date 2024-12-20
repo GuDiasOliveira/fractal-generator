@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import styles from './LanguageSelector.module.css';
+import * as S from './LanguageSelector.styles';
 
 const LanguageSelector: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -20,9 +20,9 @@ const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <div className={styles.languageSelector}>
-      <label>{t('language')}:</label>
-      <select
+    <S.Container>
+      <S.Label>{t('language')}:</S.Label>
+      <S.Select
         value={i18n.language}
         onChange={(e) => handleLanguageChange(e.target.value)}
       >
@@ -31,8 +31,8 @@ const LanguageSelector: React.FC = () => {
             {lang.name}
           </option>
         ))}
-      </select>
-    </div>
+      </S.Select>
+    </S.Container>
   );
 };
 

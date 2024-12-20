@@ -1,18 +1,24 @@
 import { useTranslation } from 'react-i18next'
 import FractalGenerator from './components/FractalGenerator'
 import LanguageSelector from './components/LanguageSelector'
-import './App.css'
+import * as S from './App.styles'
+import { GlobalStyles } from './styles/GlobalStyles'
 import './i18n'
 
 const App: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="App">
-      <LanguageSelector />
-      <h1>{t('title')}</h1>
-      <FractalGenerator />
-    </div>
+    <>
+      <GlobalStyles />
+      <S.Root>
+        <S.AppContainer>
+          <LanguageSelector />
+          <S.Title>{t('title')}</S.Title>
+          <FractalGenerator />
+        </S.AppContainer>
+      </S.Root>
+    </>
   )
 }
 

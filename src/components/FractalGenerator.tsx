@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FractalSettings } from '../types/fractal';
-import styles from './FractalGenerator.module.css';
+import * as S from './FractalGenerator.styles';
 
 const FractalGenerator: React.FC = () => {
   const { t } = useTranslation();
@@ -46,9 +46,9 @@ const FractalGenerator: React.FC = () => {
   const paths = generateFractalPoints(400, 500, 100, -90, settings.iterations);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.controls}>
-        <div className={styles.controlGroup}>
+    <S.Container>
+      <S.Controls>
+        <S.ControlGroup>
           <label>{t('controls.iterations')}:</label>
           <input
             type="range"
@@ -58,9 +58,9 @@ const FractalGenerator: React.FC = () => {
             onChange={(e) => handleSettingChange('iterations', parseInt(e.target.value))}
           />
           <span>{settings.iterations}</span>
-        </div>
+        </S.ControlGroup>
 
-        <div className={styles.controlGroup}>
+        <S.ControlGroup>
           <label>{t('controls.angle')}:</label>
           <input
             type="range"
@@ -70,9 +70,9 @@ const FractalGenerator: React.FC = () => {
             onChange={(e) => handleSettingChange('angle', parseInt(e.target.value))}
           />
           <span>{settings.angle}°</span>
-        </div>
+        </S.ControlGroup>
 
-        <div className={styles.controlGroup}>
+        <S.ControlGroup>
           <label>{t('controls.scale')}:</label>
           <input
             type="range"
@@ -83,18 +83,18 @@ const FractalGenerator: React.FC = () => {
             onChange={(e) => handleSettingChange('scale', parseFloat(e.target.value))}
           />
           <span>{settings.scale}</span>
-        </div>
+        </S.ControlGroup>
 
-        <div className={styles.controlGroup}>
+        <S.ControlGroup>
           <label>{t('controls.color')}:</label>
           <input
             type="color"
             value={settings.color}
             onChange={(e) => handleSettingChange('color', e.target.value)}
           />
-        </div>
+        </S.ControlGroup>
 
-        <div className={styles.controlGroup}>
+        <S.ControlGroup>
           <label>{t('controls.strokeWidth')}:</label>
           <input
             type="range"
@@ -104,11 +104,11 @@ const FractalGenerator: React.FC = () => {
             onChange={(e) => handleSettingChange('strokeWidth', parseInt(e.target.value))}
           />
           <span>{settings.strokeWidth}</span>
-        </div>
-      </div>
+        </S.ControlGroup>
+      </S.Controls>
 
-      <div className={styles.fractalContainer}>
-        <svg width="800" height="600" className={styles.fractal}>
+      <S.FractalContainer>
+        <S.FractalSVG width="800" height="600">
           {paths.map((path, index) => (
             <path
               key={index}
@@ -118,9 +118,9 @@ const FractalGenerator: React.FC = () => {
               fill="none"
             />
           ))}
-        </svg>
-      </div>
-    </div>
+        </S.FractalSVG>
+      </S.FractalContainer>
+    </S.Container>
   );
 };
 

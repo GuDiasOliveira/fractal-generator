@@ -1,4 +1,6 @@
-.languageSelector {
+import styled from 'styled-components';
+
+export const Container = styled.div`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -9,14 +11,14 @@
   padding: 0.5rem 1rem;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-}
+`;
 
-.languageSelector label {
+export const Label = styled.label`
   color: #ccc;
   font-size: 0.9rem;
-}
+`;
 
-.languageSelector select {
+export const Select = styled.select`
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -25,13 +27,13 @@
   outline: none;
   cursor: pointer;
   font-size: 0.9rem;
-}
 
-.languageSelector select:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-}
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
 
-.languageSelector select option {
-  background: #1a1a1a;
-  color: #fff;
-}
+  option {
+    background: #1a1a1a;
+    color: #fff;
+  }
+`;
